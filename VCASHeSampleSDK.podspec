@@ -17,5 +17,6 @@ This CocoaPods library helps you perform calculation.
 
   spec.source        = { :git => "https://github.com/dusianandakumar/VCASHeSampleSDK.git", :tag => "#{spec.version}" }
   spec.source_files  = "VCASHeSampleSDK/**/*.{h,m,swift}"
+  spec.dependency      'React'
 
 end
