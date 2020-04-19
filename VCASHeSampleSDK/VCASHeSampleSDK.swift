@@ -8,6 +8,7 @@
 
 import Foundation
 import Network
+import UIKit
 
 public class NetStatus {
     
@@ -87,6 +88,31 @@ public class NetStatus {
         self.monitor = nil
         isMonitoring = false
         didStopMonitoringHandler?()
+    }
+    
+    public func initializeReactView(view:UIView) {
+    
+        let REACT_DEV_MODE = false
+        
+        var jsCodeLocation = NSURL(string: "http://localhost:8081/index.ios.bundle?platform=ios&dev=true")
+        
+        if !REACT_DEV_MODE {
+            jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle") as NSURL?
+        }
+        
+        let rootView = RCTRootView(bundleURL: jsCodeLocation,
+            moduleName: "ReactNativeExample",
+            initialProperties: self.data!,
+            launchOptions: nil)
+        rootView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rootView)
+        
+        let views = ["rootView": rootView]
+        var constraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[rootView]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views)
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[rootView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        
+        view.addConstraints(constraints)
+        view.layoutIfNeeded()
     }
     
 }
