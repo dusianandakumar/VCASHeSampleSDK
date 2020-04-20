@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VCASHeSampleSDK"
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
@@ -16,7 +16,7 @@ This CocoaPods library helps you perform calculation.
   spec.swift_version = "4.0"
 
   spec.source        = { :git => "https://github.com/dusianandakumar/VCASHeSampleSDK.git", :tag => "#{spec.version}" }
-  spec.source_files  = "VCASHeSampleSDK/**/*.{h,m,swift}"
+  spec.source_files  = "VCASHeSampleSDK/**/*.{h,m,swift,bundle}"
   spec.platform      = :ios, '9.0'
   spec.dependency      'React'
 
