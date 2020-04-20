@@ -12,6 +12,10 @@ import UIKit
 
 public class NetStatus {
     
+    // MARK: - Properties
+    
+    static public let shared = NetStatus()
+    
     public func getJSLocation() -> NSURL{
     
         let REACT_DEV_MODE = false
