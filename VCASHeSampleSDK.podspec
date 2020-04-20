@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VCASHeSampleSDK"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
