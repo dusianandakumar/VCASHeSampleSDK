@@ -24,13 +24,12 @@ public class NetStatus {
         
         if !REACT_DEV_MODE {
             let bundle = Bundle(for: type(of: self))
-            jsCodeLocation = NSURL.init(fileURLWithPath: bundle.path(forResource: "main", ofType: "jsbundle")!)
+            //jsCodeLocation = NSURL.init(fileURLWithPath: bundle.path(forResource: "main", ofType: "jsbundle")!)
             //jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle") as NSURL?
+            jsCodeLocation = bundle.url(forResource: "main", withExtension: "jsbundle") as NSURL?
         }
         
         return jsCodeLocation!
-        
     }
-    
 }
 
