@@ -23,7 +23,9 @@ public class NetStatus {
         var jsCodeLocation = NSURL(string: "http://localhost:8081/index.ios.bundle?platform=ios&dev=true")
         
         if !REACT_DEV_MODE {
-            jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle") as NSURL?
+            let bundle = Bundle(for: type(of: self))
+            jsCodeLocation = NSURL.init(fileURLWithPath: bundle.path(forResource: "main", ofType: "jsbundle")!)
+            //jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle") as NSURL?
         }
         
         return jsCodeLocation!
