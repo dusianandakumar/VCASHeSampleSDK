@@ -17,12 +17,15 @@ public class NetStatus {
     static public let shared = NetStatus()
     
     public func getBundlePath() -> URL{
-        let bundle = Bundle(for: type(of: self))
-        // let bundle = Bundle(for: ClassOfInterest.self)) // or by pointing to class of interest
-        let path = bundle.path(forResource: "main", ofType: "jsbundle")!
-        let url = URL(fileURLWithPath: path)
-        //let data = try! Data(contentsOf: url)
-        return url
+        let podBundle = Bundle(for: NetStatus.self)
+        if let bundleURL = podBundle.url(forResource: "VCASHeSampleSDK", withExtension: "bundle")
+        {
+             let bundle = Bundle(url:bundleURL)!
+             let path = bundle.path(forResource: "main", ofType: "jsbundle")!
+             let jsBundleLocation = URL(fileURLWithPath: path)
+            return jsBundleLocation
+        }
+        return URL.init(fileURLWithPath: "")
     }
 }
 
