@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B09FB0A244EC1E500895F24 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 9B09FB09244EC1E500895F24 /* assets */; };
 		9B1D3DAD244CDB6400726836 /* VCASHeSampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1D3DA3244CDB6300726836 /* VCASHeSampleSDK.framework */; };
 		9B1D3DB2244CDB6400726836 /* VCASHeSampleSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D3DB1244CDB6400726836 /* VCASHeSampleSDKTests.swift */; };
 		9B1D3DB4244CDB6400726836 /* VCASHeSampleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1D3DA6244CDB6300726836 /* VCASHeSampleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B09FB09244EC1E500895F24 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		9B1D3DA3244CDB6300726836 /* VCASHeSampleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCASHeSampleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1D3DA6244CDB6300726836 /* VCASHeSampleSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCASHeSampleSDK.h; sourceTree = "<group>"; };
 		9B1D3DA7244CDB6300726836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		9B1D3DA5244CDB6300726836 /* VCASHeSampleSDK */ = {
 			isa = PBXGroup;
 			children = (
+				9B09FB09244EC1E500895F24 /* assets */,
 				9B1D3DBF244CE7E800726836 /* main.jsbundle */,
 				9B1D3DA6244CDB6300726836 /* VCASHeSampleSDK.h */,
 				9B1D3DA7244CDB6300726836 /* Info.plist */,
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1D3DC0244CE7E800726836 /* main.jsbundle in Resources */,
+				9B09FB0A244EC1E500895F24 /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
